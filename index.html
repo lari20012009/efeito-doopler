@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora - Efeito Doppler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Efeito Doppler</h1>
+        <p class="subtitle">
+            Calculadora de frequência percebida pelo observador
+        </p>
+
+        <div class="formulario">
+
+            <label for="velObservador">
+                Velocidade do observador (m/s):
+            </label>
+            <input type="number" id="velObservador"
+                   step="any" value="0">
+
+            <small>
+                Positivo: aproximação | Negativo: afastamento
+            </small>
+
+            <label for="velFonte">
+                Velocidade da fonte (m/s):
+            </label>
+            <input type="number" id="velFonte"
+                   step="any" value="0">
+
+            <small>
+                Positivo: aproximação | Negativo: afastamento
+            </small>
+
+            <label for="velSom">
+                Velocidade do som (m/s):
+            </label>
+            <input type="number" id="velSom"
+                   step="any" value="343">
+
+            <label for="frequencia">
+                Frequência da fonte (Hz):
+            </label>
+            <input type="number" id="frequencia"
+                   step="any" min="0" placeholder="Ex: 440">
+
+            <button onclick="calcularDoppler()">
+                Calcular frequência percebida
+            </button>
+
+        </div>
+
+        <div id="resultado" class="resultado">
+            <h2>Resultado</h2>
+            <p id="mensagem">
+                Informe os valores para realizar o cálculo.
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
